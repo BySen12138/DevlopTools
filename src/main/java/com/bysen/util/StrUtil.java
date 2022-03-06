@@ -6,14 +6,13 @@ package com.bysen.util;
  * @Date 2022/3/5 22:26
  * @Description TODO
  * @Version 1.0
- * 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
  **/
 public final class StrUtil {
     private final static String Y = "Y";
     private final static String N = "N";
 
     /**
-     *
+     *用于判断字符串是否等于 Y
      * @param str
      * @return
      */
@@ -25,7 +24,7 @@ public final class StrUtil {
     }
 
     /**
-     *
+     *用于判断字符串是否等于 N
      * @param str
      * @return
      */
