@@ -38,4 +38,12 @@ public class ObjUtilTest {
     public void testIsNotNull(){
         Assert.assertEquals(ObjUtil.isNotNull(null),false);
     }
+
+    @Test
+    public void testNvl(){
+        Object object = new Object();
+        Assert.assertEquals(ObjUtil.nvl(null,object),object);
+        Assert.assertEquals(ObjUtil.nvl(object,null),object);
+        Assert.assertEquals(ObjUtil.nvl(null,null),null);
+    }
 }

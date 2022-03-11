@@ -30,4 +30,30 @@ public class StrUtilTest {
         Assert.assertEquals(StrUtil.isEqualsN(null),false);
         Assert.assertEquals(StrUtil.isEqualsN("N"),true);
     }
+
+    @Test
+    public void testIsEquals(){
+        Assert.assertEquals(StrUtil.isEquals(null,null),true);
+        Assert.assertEquals(StrUtil.isEquals(null,"str2"),false);
+        Assert.assertEquals(StrUtil.isEquals("","str2"),false);
+        Assert.assertEquals(StrUtil.isEquals("",null),false);
+        Assert.assertEquals(StrUtil.isEquals("str1",null),false);
+        Assert.assertEquals(StrUtil.isEquals("str","str"),true);
+
+    }
+
+    @Test
+    public void testLeftAdd(){
+        Assert.assertEquals(StrUtil.leftAdd("",1,"A"),"A");
+        Assert.assertEquals(StrUtil.leftAdd("A",1,"A"),"AA");
+        Assert.assertEquals(StrUtil.leftAdd("B",2,"A"),"AAB");
+    }
+
+    @Test
+    public void testRightAdd(){
+        Assert.assertEquals(StrUtil.rightAdd("",1,"A"),"A");
+        Assert.assertEquals(StrUtil.rightAdd("A",1,"A"),"AA");
+        Assert.assertEquals(StrUtil.rightAdd("B",2,"A"),"BAA");
+    }
+
 }
