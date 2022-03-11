@@ -35,4 +35,54 @@ public final class StrUtil {
         return false;
     }
 
+
+    /**
+     *判断两个字符是否相等，会处理空值
+     * @param str1
+     * @param str2
+     * @return
+     */
+    public static boolean isEquals(String str1,String str2){
+        if(str1 == null && str2 == null){
+            return true;
+        }
+        if(str1 != null){
+            return str1.equals(str2);
+        }
+        return false;
+    }
+
+    /**
+     * 在字符串左侧添加指定字符串
+     * @param source
+     * @param num
+     * @param prefix
+     * @return
+     */
+    public static String leftAdd(String source,int num,String prefix){
+        if(ObjUtil.isNull(prefix)||ObjUtil.isNull(num)|| num <= 0){return source;}
+        if (ObjUtil.isNull(source)){source = "";}
+        StringBuffer sb = new StringBuffer(source);
+        for (int i=1;i<=num;i++){
+            sb.insert(0,prefix);
+        }
+        return sb.toString();
+    }
+
+    /**
+     * 在字符串右侧添加字符串
+     * @param source
+     * @param num
+     * @param prefix
+     * @return
+     */
+    public static String rightAdd(String source,int num,String prefix){
+        if(ObjUtil.isNull(prefix)||ObjUtil.isNull(num)|| num <= 0){return source;}
+        if (ObjUtil.isNull(source)){source = "";}
+        StringBuffer sb = new StringBuffer(source);
+        for (int i=1;i<=num;i++){
+            sb.append(prefix);
+        }
+        return sb.toString();
+    }
 }

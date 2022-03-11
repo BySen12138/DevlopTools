@@ -38,4 +38,13 @@ public final class ObjUtil {
     public static boolean isNotNull(Object object){
         return !isNull(object);
     }
+
+    /**
+     *入参1不为空时直接返回，否则返回入参2
+     * @param obj1
+     * @param obj2
+     */
+    public static Object nvl(Object obj1, Object obj2){
+        return obj1 == null?obj2:obj1;
+    }
 }
